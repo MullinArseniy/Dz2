@@ -50,18 +50,6 @@ namespace Dz_Tumakov
                 Console.WriteLine($" Университет: {account1.university}");
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
     }

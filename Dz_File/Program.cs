@@ -65,7 +65,7 @@ namespace DzFile
             Console.WriteLine("\nЗадание 3");
             {
                 Console.Write("\nВведите строку:");
-                string? stroka = Console.ReadLine();
+                var stroka = Console.ReadLine();
                 char[] finalstr = new char[stroka.Length];
                 string strokaUp = stroka.ToUpper();
                 string strokaLow = stroka.ToLower();
@@ -90,7 +90,107 @@ namespace DzFile
 
             Console.WriteLine("\nЗадание 4");
             {
+                Console.Write("Введите строку: ");
+                var str1 = Console.ReadLine();
+                Console.Write("Введите подстроку: ");
+                var str2 = Console.ReadLine();
+                int k = 0;
+                for (int i = 0; i <= str1.Length - str2.Length; i++)
+                {
+                    if (str1.Substring(i, str2.Length) == str2)
+                    {
+                        k++;
+                    }
+                }
+                Console.WriteLine($"Количество вхождений: {k}");
+            }
 
+            //5
+
+            Console.WriteLine("\nЗадание 5");
+            {
+                Console.Write("Введите стандартную цену: ");
+                var priceInput = double.TryParse(Console.ReadLine(), out double normPrice);
+                Console.Write("Введите процент скидки: ");
+                var percentInput = double.TryParse(Console.ReadLine(), out double percent);
+                Console.Write("Введите стоимость поездки: ");
+                var tourInput = double.TryParse(Console.ReadLine(), out double tourPrice);
+
+                var dutyprice = (1 - (percent * 0.01)) * normPrice;
+                var solution =Math.Ceiling( tourPrice / (normPrice - dutyprice));
+                Console.WriteLine($"Для окупа поездки вам понадобится {solution} бутылок ");
+
+            }
+
+            //6
+
+            Console.WriteLine("\nЗадание 6");
+            {
+                Drink vodka = new Drink();
+                {
+                    vodka.name = "vodka";
+                    vodka.PercentageOfAlcohole = 40;
+                }
+
+                Drink beer = new Drink();
+                {
+                    beer.name = "beer";
+                    beer.PercentageOfAlcohole = 5;
+                }
+                Drink wine = new Drink();
+                {
+                    wine.name = "wine";
+                    wine.PercentageOfAlcohole = 13;
+                }
+                Drink cola = new Drink();
+                {
+                    cola.name = "cola";
+                    cola.PercentageOfAlcohole = 0;
+                }
+
+                student[] students = new student[5];
+                {
+                    students[0] = new student();
+                    { students[0].name = "Алексей"; students[0].surname = "Иванов"; students[0].id = "1"; students[0].birthdate = new DateTime(2007, 1, 1); students[0].AlcogolicCategory = 'A'; students[0].DrinkVolume = 1; students[0].TypeDrink = vodka; }
+                    students[1] = new student();
+                    { students[1].name = "Миша"; students[1].surname = "Дубин"; students[1].id = "2"; students[1].birthdate = new DateTime(2007, 1, 2); students[1].AlcogolicCategory = 'B'; students[1].DrinkVolume = 2; students[1].TypeDrink = beer; }
+                    students[2] = new student();
+                    { students[2].name = "Гриша"; students[2].surname = "Злобин"; students[2].id = "3"; students[2].birthdate = new DateTime(2007, 1, 3); students[2].AlcogolicCategory = 'C'; students[2].DrinkVolume = 1.5; students[2].TypeDrink = wine; }
+                    students[3] = new student();
+                    { students[3].name = "Арсений"; students[3].surname = "Силантьев"; students[3].id = "4"; students[3].birthdate = new DateTime(2007, 1, 4); students[3].AlcogolicCategory = 'D'; students[3].DrinkVolume = 1; students[3].TypeDrink = cola; }
+                    students[4] = new student();
+                    { students[4].name = "Ваня"; students[4].surname = "Филиппов"; students[4].id = "5"; students[4].birthdate = new DateTime(2007, 1, 5); students[4].AlcogolicCategory = 'A'; students[4].DrinkVolume = 3; students[4].TypeDrink = vodka; }
+
+                    double allVolume = 0;
+                    double allAlcohole = 0;
+
+                    foreach (var student in students)
+                    {
+                        allVolume += student.DrinkVolume;
+                        allAlcohole += student.DrinkVolume*(student.TypeDrink.PercentageOfAlcohole/100);
+                    }
+
+                    foreach(var student in students)
+                    {
+                        double alcoholeForStudent = student.DrinkVolume * (student.TypeDrink.PercentageOfAlcohole / 100);
+                        double alcoholePercentOfAll = (alcoholeForStudent/allAlcohole)*100;
+                        double fluidVolumeOfAll = (student.DrinkVolume / allVolume) * 100;
+
+                        Console.WriteLine($"\n{student.name} {student.surname}");
+                        Console.WriteLine($"Объём алкоголя {alcoholeForStudent}л, что составляет {alcoholePercentOfAll}% от общего объёма алкоголя");
+                        Console.WriteLine($"Объём жидкости {student.DrinkVolume}л, что составляет {fluidVolumeOfAll}% от общего объёма выпитого");
+                        Console.WriteLine(student.TypeDrink.PercentageOfAlcohole);
+                    }
+
+                    Console.WriteLine($"\n\nОбщий объём алкоголя: {allAlcohole}");
+                    Console.WriteLine($"Общий объём жидкости: {allVolume}");
+
+
+
+                }
+            }
+            }   
+            }
             }
 
 
@@ -104,9 +204,28 @@ namespace DzFile
 
 
 
-        }
-    }
-}
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
    

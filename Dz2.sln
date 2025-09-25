@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dz_File", "Dz_File\Dz_File.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dz_Tumakov", "Dz_Tumakov\Dz_Tumakov.csproj", "{12F4F6AD-D307-4DBD-9B10-54C4730510F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{2616085A-B235-4625-A873-E94D22960026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{12F4F6AD-D307-4DBD-9B10-54C4730510F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12F4F6AD-D307-4DBD-9B10-54C4730510F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12F4F6AD-D307-4DBD-9B10-54C4730510F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2616085A-B235-4625-A873-E94D22960026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2616085A-B235-4625-A873-E94D22960026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2616085A-B235-4625-A873-E94D22960026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2616085A-B235-4625-A873-E94D22960026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
