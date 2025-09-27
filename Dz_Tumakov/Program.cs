@@ -23,14 +23,14 @@ namespace Dz_Tumakov
             {
                 BankAccountType client1Type = (BankAccountType)1;
                 BankAccount client1 = new BankAccount();
-                client1.id = 123;
-                client1.type = client1Type ;
-                client1.balance = 150;
+                client1.Id = Guid.Parse("1234");
+                client1.Type = client1Type ;
+                client1.Balance = 150;
 
                 Console.WriteLine("\nИнформация о банковском счёте");
-                Console.WriteLine($" Номер счёта: {client1.id}");
-                Console.WriteLine($" Тип счёта: {client1.type}");
-                Console.WriteLine($" Баланс: {client1.balance}");
+                Console.WriteLine($" Номер счёта: {client1.Id}");
+                Console.WriteLine($" Тип счёта: {client1.Type}");
+                Console.WriteLine($" Баланс: {client1.Balance}");
             }
 
             //3
@@ -41,13 +41,13 @@ namespace Dz_Tumakov
                 var name = Console.ReadLine();
                 Console.WriteLine("Выберите номер ВУЗа: 1)КГУ  2)КАИ  3)КХТИ ");
                 var univ = int.Parse(Console.ReadLine());
-                worker account1 = new worker();
-                account1.name = name;
-                account1.university = (University)(univ-1);
+                Worker account1 = new Worker();
+                account1.Name = name;
+                account1.University = (University)(univ-1);
 
                 Console.WriteLine("\nДанные рабочего");
-                Console.WriteLine($" Имя: {account1.name}");
-                Console.WriteLine($" Университет: {account1.university}");
+                Console.WriteLine($" Имя: {account1.Name}");
+                Console.WriteLine($" Университет: {account1.University}");
 
             }
         }

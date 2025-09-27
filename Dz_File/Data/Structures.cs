@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dz_File.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,20 +16,20 @@ namespace Dz_File.Structures
         public string pin;
     }
 
-    public struct student 
+    public struct Student 
     {
-        public string name;
-        public string surname;
-        public string id;
-        public DateTime birthdate;
-        public char AlcogolicCategory;
+        public string Name;
+        public string Surname;
+        public Guid Id;
+        public DateTime Birthdate;
+        public AlcoholicType AlcogolicCategory;
         public double DrinkVolume;
         public Drink TypeDrink;
     }
 
     public struct Drink
     {
-        public string name;
+        public string Name;
         public double PercentageOfAlcohole;
     }
 

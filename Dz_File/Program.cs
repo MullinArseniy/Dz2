@@ -128,41 +128,43 @@ namespace DzFile
             {
                 Drink vodka = new Drink();
                 {
-                    vodka.name = "vodka";
+                    vodka.Name = "vodka";
                     vodka.PercentageOfAlcohole = 40;
                 }
 
                 Drink beer = new Drink();
                 {
-                    beer.name = "beer";
+                    beer.Name = "beer";
                     beer.PercentageOfAlcohole = 5;
                 }
                 Drink wine = new Drink();
                 {
-                    wine.name = "wine";
+                    wine.Name = "wine";
                     wine.PercentageOfAlcohole = 13;
                 }
                 Drink cola = new Drink();
                 {
-                    cola.name = "cola";
+                    cola.Name = "cola";
                     cola.PercentageOfAlcohole = 0;
                 }
 
-                student[] students = new student[5];
+                Student[] students = new Student[5];
                 {
-                    students[0] = new student();
-                    { students[0].name = "Алексей"; students[0].surname = "Иванов"; students[0].id = "1"; students[0].birthdate = new DateTime(2007, 1, 1); students[0].AlcogolicCategory = 'A'; students[0].DrinkVolume = 1; students[0].TypeDrink = vodka; }
-                    students[1] = new student();
-                    { students[1].name = "Миша"; students[1].surname = "Дубин"; students[1].id = "2"; students[1].birthdate = new DateTime(2007, 1, 2); students[1].AlcogolicCategory = 'B'; students[1].DrinkVolume = 2; students[1].TypeDrink = beer; }
-                    students[2] = new student();
-                    { students[2].name = "Гриша"; students[2].surname = "Злобин"; students[2].id = "3"; students[2].birthdate = new DateTime(2007, 1, 3); students[2].AlcogolicCategory = 'C'; students[2].DrinkVolume = 1.5; students[2].TypeDrink = wine; }
-                    students[3] = new student();
-                    { students[3].name = "Арсений"; students[3].surname = "Силантьев"; students[3].id = "4"; students[3].birthdate = new DateTime(2007, 1, 4); students[3].AlcogolicCategory = 'D'; students[3].DrinkVolume = 1; students[3].TypeDrink = cola; }
-                    students[4] = new student();
-                    { students[4].name = "Ваня"; students[4].surname = "Филиппов"; students[4].id = "5"; students[4].birthdate = new DateTime(2007, 1, 5); students[4].AlcogolicCategory = 'A'; students[4].DrinkVolume = 3; students[4].TypeDrink = vodka; }
+
+                    students[0] = new Student();
+                    { students[0].Name = "Алексей"; students[0].Surname = "Иванов"; students[0].Id = Guid.Parse("1"); students[0].Birthdate = new DateTime(2007, 1, 1); students[0].AlcogolicCategory = AlcoholicType.A; students[0].DrinkVolume = 1; students[0].TypeDrink = vodka; }
+                    students[1] = new Student();
+                    { students[1].Name = "Миша"; students[1].Surname = "Дубин"; students[1].Id = Guid.Parse("2"); students[1].Birthdate = new DateTime(2007, 1, 2); students[1].AlcogolicCategory =AlcoholicType.B ; students[1].DrinkVolume = 2; students[1].TypeDrink = beer; }
+                    students[2] = new Student();
+                    { students[2].Name = "Гриша"; students[2].Surname = "Злобин"; students[2].Id = Guid.Parse("3"); students[2].Birthdate = new DateTime(2007, 1, 3); students[2].AlcogolicCategory = AlcoholicType.C; students[2].DrinkVolume = 1.5; students[2].TypeDrink = wine; }
+                    students[3] = new Student();
+                    { students[3].Name = "Арсений"; students[3].Surname = "Силантьев"; students[3].Id =Guid.Parse("4"); students[3].Birthdate = new DateTime(2007, 1, 4); students[3].AlcogolicCategory = AlcoholicType.D; students[3].DrinkVolume = 1; students[3].TypeDrink = cola; }
+                    students[4] = new Student();
+                    { students[4].Name = "Ваня"; students[4].Surname = "Филиппов"; students[4].Id = Guid.Parse("5"); students[4].Birthdate = new DateTime(2007, 1, 5); students[4].AlcogolicCategory = AlcoholicType.A; students[4].DrinkVolume = 3; students[4].TypeDrink = vodka; }
 
                     double allVolume = 0;
                     double allAlcohole = 0;
+
 
                     foreach (var student in students)
                     {
@@ -176,7 +178,7 @@ namespace DzFile
                         double alcoholePercentOfAll = (alcoholeForStudent/allAlcohole)*100;
                         double fluidVolumeOfAll = (student.DrinkVolume / allVolume) * 100;
 
-                        Console.WriteLine($"\n{student.name} {student.surname}");
+                        Console.WriteLine($"\n{student.Name} {student.Surname}");
                         Console.WriteLine($"Объём алкоголя {alcoholeForStudent}л, что составляет {alcoholePercentOfAll}% от общего объёма алкоголя");
                         Console.WriteLine($"Объём жидкости {student.DrinkVolume}л, что составляет {fluidVolumeOfAll}% от общего объёма выпитого");
                         Console.WriteLine(student.TypeDrink.PercentageOfAlcohole);
