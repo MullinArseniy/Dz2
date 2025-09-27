@@ -4,7 +4,7 @@ namespace Dz_Tumakov.Structures
 {
     public struct BankAccount
     {
-        public Guid Id;
+        public long Id;
         public BankAccountType Type;
         public decimal Balance;
     }

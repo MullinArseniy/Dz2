@@ -152,15 +152,15 @@ namespace DzFile
                 {
 
                     students[0] = new Student();
-                    { students[0].Name = "Алексей"; students[0].Surname = "Иванов"; students[0].Id = Guid.Parse("1"); students[0].Birthdate = new DateTime(2007, 1, 1); students[0].AlcogolicCategory = AlcoholicType.A; students[0].DrinkVolume = 1; students[0].TypeDrink = vodka; }
+                    { students[0].Name = "Алексей"; students[0].Surname = "Иванов"; students[0].Id = Guid.Parse("11111111-1111-1111-1111-111111111111"); students[0].Birthdate = new DateTime(2007, 1, 1); students[0].AlcogolicCategory = AlcoholicType.A; students[0].DrinkVolume = 1; students[0].TypeDrink = vodka; }
                     students[1] = new Student();
-                    { students[1].Name = "Миша"; students[1].Surname = "Дубин"; students[1].Id = Guid.Parse("2"); students[1].Birthdate = new DateTime(2007, 1, 2); students[1].AlcogolicCategory =AlcoholicType.B ; students[1].DrinkVolume = 2; students[1].TypeDrink = beer; }
+                    { students[1].Name = "Миша"; students[1].Surname = "Дубин"; students[1].Id = Guid.Parse("22222222-2222-2222-2222-222222222222"); students[1].Birthdate = new DateTime(2007, 1, 2); students[1].AlcogolicCategory =AlcoholicType.B ; students[1].DrinkVolume = 2; students[1].TypeDrink = beer; }
                     students[2] = new Student();
-                    { students[2].Name = "Гриша"; students[2].Surname = "Злобин"; students[2].Id = Guid.Parse("3"); students[2].Birthdate = new DateTime(2007, 1, 3); students[2].AlcogolicCategory = AlcoholicType.C; students[2].DrinkVolume = 1.5; students[2].TypeDrink = wine; }
+                    { students[2].Name = "Гриша"; students[2].Surname = "Злобин"; students[2].Id = Guid.Parse("33333333-3333-3333-3333-333333333333"); students[2].Birthdate = new DateTime(2007, 1, 3); students[2].AlcogolicCategory = AlcoholicType.C; students[2].DrinkVolume = 1.5; students[2].TypeDrink = wine; }
                     students[3] = new Student();
-                    { students[3].Name = "Арсений"; students[3].Surname = "Силантьев"; students[3].Id =Guid.Parse("4"); students[3].Birthdate = new DateTime(2007, 1, 4); students[3].AlcogolicCategory = AlcoholicType.D; students[3].DrinkVolume = 1; students[3].TypeDrink = cola; }
+                    { students[3].Name = "Арсений"; students[3].Surname = "Силантьев"; students[3].Id =Guid.Parse("44444444-4444-4444-4444-444444444444"); students[3].Birthdate = new DateTime(2007, 1, 4); students[3].AlcogolicCategory = AlcoholicType.D; students[3].DrinkVolume = 1; students[3].TypeDrink = cola; }
                     students[4] = new Student();
-                    { students[4].Name = "Ваня"; students[4].Surname = "Филиппов"; students[4].Id = Guid.Parse("5"); students[4].Birthdate = new DateTime(2007, 1, 5); students[4].AlcogolicCategory = AlcoholicType.A; students[4].DrinkVolume = 3; students[4].TypeDrink = vodka; }
+                    { students[4].Name = "Ваня"; students[4].Surname = "Филиппов"; students[4].Id = Guid.Parse("55555555-5555-5555-5555-555555555555"); students[4].Birthdate = new DateTime(2007, 1, 5); students[4].AlcogolicCategory = AlcoholicType.A; students[4].DrinkVolume = 3; students[4].TypeDrink = vodka; }
 
                     double allVolume = 0;
                     double allAlcohole = 0;

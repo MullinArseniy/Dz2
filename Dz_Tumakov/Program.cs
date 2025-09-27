@@ -23,7 +23,7 @@ namespace Dz_Tumakov
             {
                 BankAccountType client1Type = (BankAccountType)1;
                 BankAccount client1 = new BankAccount();
-                client1.Id = Guid.Parse("1234");
+                client1.Id = 12345;
                 client1.Type = client1Type ;
                 client1.Balance = 150;
 
